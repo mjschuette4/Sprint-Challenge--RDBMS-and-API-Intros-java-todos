@@ -1,5 +1,3 @@
-package com.lambdaschool.todos;
-
 import com.lambdaschool.todos.models.Todos;
 import com.lambdaschool.todos.models.User;
 import com.lambdaschool.todos.services.UserService;
@@ -8,17 +6,17 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import static org.graalvm.compiler.options.OptionType.User;
+
 @Transactional
 @Component
-public class SeedData implements CommandLineRunner
-{
+public class SeedData implements CommandLineRunner {
     @Autowired
     UserService userService;
 
     @Transactional
     @Override
-    public void run(String[] args) throws Exception
-    {
+    public void run(String[] args) throws Exception {
         User u1 = new User("admin",
             "password",
             "admin@lambdaschool.local");
