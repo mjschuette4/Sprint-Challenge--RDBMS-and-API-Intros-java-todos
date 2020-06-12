@@ -54,7 +54,7 @@ public class Todo {
     }
 
     public boolean isCompletedSwitch() {
-        return completedSwitch;
+        return completed;
     }
 
     public void setCompletedSwitch(boolean completedSwitch) {

@@ -38,6 +38,10 @@ public class User {
         this.password = password;
     }
 
+    public long getUserid() {
+        return userid;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -76,6 +80,12 @@ public class User {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public void addRole(Role role){
+
+        roles.add(role);
+        role.getUsers().add(this);
     }
 }
 
